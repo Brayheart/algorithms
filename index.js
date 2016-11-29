@@ -492,3 +492,29 @@ function partsSums(ls) {
   }
   return [0]
 }
+
+//https://www.codewars.com/kata/5202ef17a402dd033c000009/train/javascript
+
+function titleCase(title, minorWords) {
+
+  if(title) {
+      var title = title.split(' ').map(el => el.toLowerCase())
+      if(minorWords){
+        var minorWords = minorWords.split(' ').map(el => el.toLowerCase())
+      }
+      var sol = []
+      for(var i = 0; i < title.length; i++){  
+        if(minorWords === undefined || !minorWords.includes(title[i]) || i === 0){          
+          var temp = title[i].split('')
+          var newWord = temp.shift().toUpperCase() + temp.join('').toLowerCase()
+          sol.push(newWord)
+        } else {
+          sol.push(title[i])
+        }
+      }
+
+      return sol.join(' ')
+  }
+  
+  return ''
+}
