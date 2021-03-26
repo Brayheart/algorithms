@@ -32,4 +32,19 @@ function removeVowels(str){
   return solution
 }
 
-removeVowels("balloon")
+// removeVowels("balloon")
+
+var isPalindrome = function(str) {
+  var reversedString = str
+    .split("")
+    .reverse()
+    .join("");
+
+  if (reversedString === str) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+isPalindrome("racecar")
