@@ -42,9 +42,24 @@ var isPalindrome = function(str) {
 
   if (reversedString === str) {
     return true;
-  } else {
+  } else {``
     return false;
   }
 };
 
 isPalindrome("racecar")
+
+//CTCI 1.1
+//Create algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?
+
+function isUnique(str){
+  var newArr = Array.from(new Set(str))
+  console.log(newArr, str)
+  if(newArr.length == str.length){
+    return "true"
+  }
+  return "false"
+}
+
+// isUnique("string")
+// isUnique("ballooon")
