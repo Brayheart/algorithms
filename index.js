@@ -66,22 +66,19 @@ function isUnique(str){
 
 // Write code to create a function that accepts a string and returns an object containing the number of times each character appears in the string
 
-var characterCount = function(str) {
-  var charMap = {};
+//Given the array nums consisting of 2n elements in the form [x1,x2,...,xn,y1,y2,...,yn].
 
-  for (var i = 0; i < str.length; i++) {
-    var char = str[i];
+var shuffle = function(nums, n) {
+  arr1 = nums.splice(n)
+  arr2 = nums
+  newArr = []
 
-    if (char in charMap) {
-      charMap[char]++;
-    } else {
-      charMap[char] = 1;
-    }
+  console.log(arr1, arr2)
+  
+  for(var i = 0; i < nums.length; i++){
+    newArr.push(arr2[i])
+    newArr.push(arr1[i])
   }
 
-  return charMap;
+  return newArr
 };
-
-function isPermutation(str1, str2) {
-  
-}
