@@ -82,3 +82,16 @@ var shuffle = function(nums, n) {
 
   return newArr
 };
+
+var maximumWealth = function(accounts) {
+    count = 0
+  const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+  accounts.forEach(el => {
+    if(el.reduce(reducer) > count){
+      count = el.reduce(reducer)
+    }
+  })
+    
+  return count
+};
