@@ -109,3 +109,31 @@ function fizzbuzz(){
     }
   }
 }
+
+//https://leetcode.com/problems/sum-of-all-odd-length-subarrays/submissions/
+
+var sumOddLengthSubarrays = function(arr) {
+    //find subarrays with odd numbered length values
+      //add values together
+  var oddSubArrays = [];
+  var sum = 0
+
+  for(var i = 0; i <= arr.length; i++){
+    for(var j = 1; j <= arr.length; j++){
+      if(arr.slice(i,j).length % 2 != 0){
+        oddSubArrays.push(arr.slice(i,j))
+      }
+    }
+  }
+  
+  i = 0
+  while(i < oddSubArrays.length){
+    // console.log(oddSubArrays[i])
+    oddSubArrays[i].forEach(el => {
+      sum += el
+    })
+    i++
+  }
+
+  return sum
+};
