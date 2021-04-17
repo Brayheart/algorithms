@@ -137,3 +137,16 @@ var sumOddLengthSubarrays = function(arr) {
 
   return sum
 };
+
+function getMissingElement(superImportantArray){
+  //TODO
+  var int 
+  
+  for(var i = 0; i < 10; i++){
+    if(!superImportantArray.includes(i)){
+      int = i
+    }
+  }
+  
+  return int
+}
