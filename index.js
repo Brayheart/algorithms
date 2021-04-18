@@ -139,7 +139,6 @@ var sumOddLengthSubarrays = function(arr) {
 };
 
 function getMissingElement(superImportantArray){
-  //TODO
   var int 
   
   for(var i = 0; i < 10; i++){
@@ -149,4 +148,26 @@ function getMissingElement(superImportantArray){
   }
   
   return int
+}
+
+function highAndLow(numbers){
+  var nums = numbers.split(' ')
+  var newNums = []
+
+  nums.forEach(el => {
+    newNums.push(parseInt(el))
+  })
+  
+  var high = newNums[0]
+  var low = newNums[0]
+  
+  newNums.forEach(el => {
+     if(high < el){
+       high = el
+     } else if(low > el){
+       low = el
+     }
+  })
+  
+  return high + ' ' + low
 }
