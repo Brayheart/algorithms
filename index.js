@@ -171,3 +171,17 @@ function highAndLow(numbers){
   
   return high + ' ' + low
 }
+
+// letters to numbers
+
+function switcher(x){
+  var letters = '0zyxwvutsrqponmlkjihgfedcba!? '.split("")
+  console.log(letters[26])
+  var word = []
+  
+  x.forEach(el => {
+    word.push(letters[el])
+  })
+
+   return word.join('')
+}
