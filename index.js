@@ -185,3 +185,15 @@ function switcher(x){
 
    return word.join('')
 }
+
+function accum(s) {
+  var arr = s.split('')
+  var solution = [arr[0].toUpperCase()]
+
+
+  for (var i = 1; i < arr.length; i++) {
+    solution.push([arr[i].toUpperCase() + arr[i].repeat(i).toLowerCase()])
+  }
+
+  return solution.join('-')
+}
