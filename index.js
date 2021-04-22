@@ -197,3 +197,8 @@ function accum(s) {
 
   return solution.join('-')
 }
+
+//https://www.codewars.com/kata/5264d2b162488dc400000001/train/javascript
+function spinWords(string){
+  return string.split(" ").map(el => {return el.length >= 5 ? el.split('').reverse().join('') : el}).join(' ')
+}
