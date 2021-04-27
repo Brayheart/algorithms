@@ -208,3 +208,10 @@ function spinWords(string){
 function solution(nums){
   return nums ? nums.sort((a,b) =>  a - b) : []
 }
+
+//https://www.codewars.com/kata/57a0e5c372292dd76d000d7e/train/javascript
+function repeatStr (n, s) {
+  return s.repeat(n);
+}
+
+var test
