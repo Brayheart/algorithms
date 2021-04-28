@@ -214,4 +214,14 @@ function repeatStr (n, s) {
   return s.repeat(n);
 }
 
-var test
+// https://www.codewars.com/kata/514b92a657cdc65150000006/solutions/javascript
+
+function solution(number){
+  var arr = []
+  
+  for(var i = 0; i < number; i++){
+    (i % 3 == 0 || i % 5 == 0) ? arr.push(i) : ""
+  }
+  
+  return arr.length ? arr.reduce((acc, el) => acc + el) : 0
+}
