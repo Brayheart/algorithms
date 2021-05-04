@@ -225,3 +225,10 @@ function solution(number){
   
   return arr.length ? arr.reduce((acc, el) => acc + el) : 0
 }
+
+//https://www.codewars.com/kata/555086d53eac039a2a000083/train/javascript
+
+function lovefunc(flower1, flower2){
+  // moment of truth
+  return flower1 % 2 === 0 && flower2 % 2 === 0 || flower1 % 2 != 0 && flower2 % 2 != 0 ? false : true
+}
