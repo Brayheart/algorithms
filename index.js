@@ -247,16 +247,5 @@ function greet(name){
 //https://www.codewars.com/kata/5208f99aee097e6552000148/train/javascript
 
 function solution(string) {
-  var arr = string.split('')
-  var solution = []
-  
-  arr.forEach(el => {
-    if(el.toUpperCase() == el){
-      solution.push(' ')
-    } 
-     solution.push(el)
-  })
-    
-  
-  return solution.join('')
+  return string.split('').map(el => {if(el.toUpperCase() == el){return ' ' + el} return el}).join('')
 }
