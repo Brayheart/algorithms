@@ -249,3 +249,15 @@ function greet(name){
 function solution(string) {
   return string.split('').map(el => {return el.toUpperCase() == el ? ' ' + el : el }).join('')
 }
+
+//https://www.codewars.com/kata/57cc981a58da9e302a000214/train/javascript
+
+function smallEnough(a, limit){
+  
+  for(var i = 0; i < a.length; i++){
+    if(a[i] > limit){
+      return false
+    } 
+  }
+  return true
+}
