@@ -243,3 +243,20 @@ function greet(name){
   //your code here
   return `Hello, ${name} how are you doing today?`
 }
+
+//https://www.codewars.com/kata/5208f99aee097e6552000148/train/javascript
+
+function solution(string) {
+  var arr = string.split('')
+  var solution = []
+  
+  arr.forEach(el => {
+    if(el.toUpperCase() == el){
+      solution.push(' ')
+    } 
+     solution.push(el)
+  })
+    
+  
+  return solution.join('')
+}
