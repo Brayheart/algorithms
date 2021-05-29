@@ -268,3 +268,9 @@ function smallEnough(a, limit){
 function oddOrEven(array) {
    return array.reduce((a,b) => a+b,0) % 2 === 0 ? 'even' : 'odd'
 }
+
+//https://www.codewars.com/kata/51f2d1cafc9c0f745c00037d/solutions/javascript
+
+function solution(str, ending){
+  return ending === str.slice(str.length - ending.length, str.length)
+}
