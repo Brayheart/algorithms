@@ -274,3 +274,14 @@ function oddOrEven(array) {
 function solution(str, ending){
   return ending === str.slice(str.length - ending.length, str.length)
 }
+
+//https://www.codewars.com/kata/5f70c883e10f9e0001c89673/solutions/javascript
+
+const flip=(d, a)=>{
+  //TODO
+  if (d == 'R'){
+    return a.sort(function(a,b){return a-b})
+  } else {
+    return a.sort(function(a,b){return b-a})
+  }
+}
