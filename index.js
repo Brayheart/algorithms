@@ -279,6 +279,29 @@ function solution(str, ending){
 
 const flip=(d, a)=>{
   //TODO
-  d == 'R' ? return a.sort(function(a,b){return a-b}) : return a.sort(function(a,b){return b-a})
+  d == 'R' ? a = a.sort(function(a,b){return a-b}) : a = a.sort(function(a,b){return b-a})
+  return a
+}
+
+https://www.codewars.com/kata/54da5a58ea159efa38000836/train/javascript
+function findOdd(A) {
+
+  var obj = {}
+  var sol = 0
   
+  A.forEach(el => {
+    if(!(el in obj)){
+      obj[el] = 1
+    } else {
+      obj[el] += 1
+    }
+  })
+
+  Object.entries(obj).map(el => {
+    if(parseInt(el[1]) % 2 != 0){
+      sol = el[0]
+       }
+  })
+    
+  return parseInt(sol);
 }
