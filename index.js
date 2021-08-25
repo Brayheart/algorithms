@@ -305,3 +305,35 @@ function findOdd(A) {
     
   return parseInt(sol);
 }
+
+https://www.codewars.com/kata/57eb8fcdf670e99d9b000272/solutions/javascript
+
+function high(x){
+  
+  let highword = ''
+  let highscore = 0
+  
+  let characters = ' abcdefghijklmnopqrstuvwxyz'
+  characters = characters.split('')
+  
+  x = x.split(' ')
+  
+  x.forEach(el => {
+    
+    let count = 0
+    let word = el.split('')
+    
+    word.forEach(el => {
+      count += characters.indexOf(el)
+    })
+    
+    if(highscore < count){
+      highword = word.join('')
+      highscore = count
+    }
+    
+  })
+  
+  return highword
+  
+}
