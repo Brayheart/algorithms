@@ -337,3 +337,18 @@ function high(x){
   return highword
   
 }
+
+https://www.codewars.com/kata/545cedaa9943f7fe7b000048/train/javascript
+
+function isPangram(string){
+  let newArray = []
+  
+  string.split('').forEach(el => {
+    if(!newArray.includes(el.toLowerCase()) && el.match(/[a-z]/i)){
+      newArray.push(el.toLowerCase())
+    }
+  })
+  
+  
+  return newArray.length === 26 ? true : false
+}
