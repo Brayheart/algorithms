@@ -352,3 +352,23 @@ function isPangram(string){
   
   return newArray.length === 26 ? true : false
 }
+
+function highAndLow(numbers){
+
+  var arr = numbers.split(' ')
+  
+  var high = arr[0];
+  var low = arr[0];
+
+  arr.forEach(el => {
+    el = parseInt(el)
+    if(high < el) {
+      high = el
+    } 
+    else if (el < low){
+      low = el
+    }
+  })
+
+  return high + ' ' + low
+}
