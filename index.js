@@ -110,7 +110,7 @@ function fizzbuzz(){
   }
 }
 
-//https://leetcode.com/problems/sum-of-all-odd-length-subarrays/submissions/
+// https://leetcode.com/problems/sum-of-all-odd-length-subarrays/submissions/
 
 var sumOddLengthSubarrays = function(arr) {
     //find subarrays with odd numbered length values
@@ -198,18 +198,18 @@ function accum(s) {
   return solution.join('-')
 }
 
-//https://www.codewars.com/kata/5264d2b162488dc400000001/train/javascript
+// https://www.codewars.com/kata/5264d2b162488dc400000001/train/javascript
 function spinWords(string){
   return string.split(" ").map(el => {return el.length >= 5 ? el.split('').reverse().join('') : el}).join(' ')
 }
 
-//https://www.codewars.com/kata/5264d2b162488dc400000001/train/javascript
+// https://www.codewars.com/kata/5264d2b162488dc400000001/train/javascript
 
 function solution(nums){
   return nums ? nums.sort((a,b) =>  a - b) : []
 }
 
-//https://www.codewars.com/kata/57a0e5c372292dd76d000d7e/train/javascript
+// https://www.codewars.com/kata/57a0e5c372292dd76d000d7e/train/javascript
 function repeatStr (n, s) {
   return s.repeat(n);
 }
@@ -226,7 +226,7 @@ function solution(number){
   return arr.length ? arr.reduce((acc, el) => acc + el) : 0
 }
 
-//https://www.codewars.com/kata/555086d53eac039a2a000083/train/javascript
+// https://www.codewars.com/kata/555086d53eac039a2a000083/train/javascript
 
 function lovefunc(flower1, flower2){
   // moment of truth
@@ -244,13 +244,13 @@ function greet(name){
   return `Hello, ${name} how are you doing today?`
 }
 
-//https://www.codewars.com/kata/5208f99aee097e6552000148/train/javascript
+// https://www.codewars.com/kata/5208f99aee097e6552000148/train/javascript
 
 function solution(string) {
   return string.split('').map(el => {return el.toUpperCase() == el ? ' ' + el : el }).join('')
 }
 
-//https://www.codewars.com/kata/57cc981a58da9e302a000214/train/javascript
+// https://www.codewars.com/kata/57cc981a58da9e302a000214/train/javascript
 
 function smallEnough(a, limit){
   
@@ -262,20 +262,20 @@ function smallEnough(a, limit){
   return true
 }
 
-//https://www.codewars.com/kata/5949481f86420f59480000e7/train/javascript
+// https://www.codewars.com/kata/5949481f86420f59480000e7/train/javascript
 
 
 function oddOrEven(array) {
    return array.reduce((a,b) => a+b,0) % 2 === 0 ? 'even' : 'odd'
 }
 
-//https://www.codewars.com/kata/51f2d1cafc9c0f745c00037d/solutions/javascript
+// https://www.codewars.com/kata/51f2d1cafc9c0f745c00037d/solutions/javascript
 
 function solution(str, ending){
   return ending === str.slice(str.length - ending.length, str.length)
 }
 
-//https://www.codewars.com/kata/5f70c883e10f9e0001c89673/solutions/javascript
+// https://www.codewars.com/kata/5f70c883e10f9e0001c89673/solutions/javascript
 
 const flip=(d, a)=>{
   //TODO
@@ -283,7 +283,7 @@ const flip=(d, a)=>{
   return a
 }
 
-https://www.codewars.com/kata/54da5a58ea159efa38000836/train/javascript
+// https://www.codewars.com/kata/54da5a58ea159efa38000836/train/javascript
 function findOdd(A) {
 
   var obj = {}
@@ -306,7 +306,7 @@ function findOdd(A) {
   return parseInt(sol);
 }
 
-https://www.codewars.com/kata/57eb8fcdf670e99d9b000272/solutions/javascript
+// https://www.codewars.com/kata/57eb8fcdf670e99d9b000272/solutions/javascript
 
 function high(x){
   
@@ -338,7 +338,7 @@ function high(x){
   
 }
 
-https://www.codewars.com/kata/545cedaa9943f7fe7b000048/train/javascript
+// https://www.codewars.com/kata/545cedaa9943f7fe7b000048/train/javascript
 
 function isPangram(string){
   let newArray = []
@@ -371,4 +371,25 @@ function highAndLow(numbers){
   })
 
   return high + ' ' + low
+}
+
+//Multiples of 3 or 5
+// https://www.codewars.com/kata/514b92a657cdc65150000006/train/javascript
+function solution(number){
+  
+  if(number > 0){
+    var arr = []
+
+    for (let i = 1; i < number; i++) {
+      if(i%5 === 0 || i%3 === 0){
+        arr.push(i)
+      }
+    }
+
+    if (arr.length > 0) {
+      return arr.reduce((sum, i) => sum + i)      
+    }
+
+  }
+  return 0
 }
