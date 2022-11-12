@@ -393,3 +393,18 @@ function solution(number){
   }
   return 0
 }
+
+//https://www.codewars.com/kata/5208f99aee097e6552000148/train/javascript
+function solution(string) {
+
+  var chars = string.split('')
+  
+  for (let index = 0; index < string.length; index++) {
+    console.log(chars[index], chars[index].toUpperCase())
+    if(chars[index] === chars[index].toUpperCase()){
+      chars.splice(index,1, ' ' + chars[index].toUpperCase())
+    }
+  }
+
+  return chars.join('')
+}
