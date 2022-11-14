@@ -408,3 +408,19 @@ function solution(string) {
 
   return chars.join('')
 }
+
+//https://www.codewars.com/kata/545a4c5a61aa4c6916000755/solutions/javascript
+function gimme (triplet) {
+
+  if(triplet[0] > triplet[1] && triplet[0] < triplet[2] || triplet[0] < triplet[1] && triplet[0] > triplet[2]){
+      return 0;
+  } else if(triplet[1] > triplet[0] && triplet[1] < triplet[2] || triplet[1] < triplet[0] && triplet[1] > triplet[2]){
+      return 1
+  } else {
+      return 2
+  }
+  
+}
+
+gimme([5, 10, 14])
+//0
