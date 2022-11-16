@@ -421,6 +421,3 @@ function gimme (triplet) {
   }
   
 }
-
-gimme([5, 10, 14])
-//0
