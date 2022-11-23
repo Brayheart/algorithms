@@ -422,4 +422,30 @@ function gimme (triplet) {
   
 }
 
-//https://www.codewars.com/kata/578aa45ee9fd15ff4600090d/train/javascript
+// https://www.codewars.com/kata/586d6cefbcc21eed7a001155/solutions/javascript
+
+function longestRepetition(s) {
+  //check if exists
+  if(s.length > 0) {
+    
+    //start with char at 0
+    let temp = s[0]
+    let longest = ''
+
+    for(var i = 0; i < s.length; i++) {
+      
+      //compare current char to next
+      if(s[i] == s[i+1]){
+        //concat if same
+        temp += s[i]
+      } else {
+        if(longest.length < temp.length) {
+          longest = temp
+        }
+        temp = s[i+1]
+      }
+    }
+    return [longest[0], longest.length];
+  }
+  return ['', 0]
+}
