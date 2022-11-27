@@ -455,3 +455,40 @@ function longestRepetition(s) {
 function moveZeros(arr) {
   return arr.filter(el => el !== 0).concat(arr.filter(el => el === 0))
 }
+
+// https://www.codewars.com/kata/52449b062fb80683ec000024/train/javascript
+
+function generateHashtag (str) {
+  var arr = str.split(' ')
+  arr = arr.filter(el => el !== '')
+  if(arr.length > 0) {
+    var sol = ['#']
+    arr.forEach(el => {
+      sol.push(el[0].toUpperCase() + el.split('').slice(1).join(''))
+    })
+    sol = sol.join('')
+    if(sol.length > 140) {
+      return false
+    } else {
+      return sol
+    }
+  }
+  
+  return false
+}
+
+//https://www.codewars.com/kata/5ce399e0047a45001c853c2b/train/javascript
+
+function partsSums(ls) {
+  if (ls.length !=0) {
+    var sum = ls.reduce((a,b) => (a+b))
+    var arr = [sum]
+
+    for(var i = 0; i < ls.length; i++) {
+      arr.push(sum -= ls[i])
+    }
+
+    return arr 
+  }
+  return [0]
+}
