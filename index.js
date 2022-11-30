@@ -518,3 +518,19 @@ function titleCase(title, minorWords) {
   
   return ''
 }
+
+// https://www.codewars.com/kata/59f08f89a5e129c543000069/train/javascript
+
+function dup(s) {
+  let sol = []
+  s.forEach(word => {
+    var newS = ''
+    for(let i = 0; i < word.length; i++) {
+      if(!(word[i] === word[i+1])){
+        newS += word[i]
+      }
+    }
+    sol.push(newS)
+  })
+  return sol
+};
