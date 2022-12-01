@@ -534,3 +534,38 @@ function dup(s) {
   })
   return sol
 };
+
+//https://leetcode.com/problems/determine-if-string-halves-are-alike/submissions/
+
+var halvesAreAlike = function(s) {
+    /*
+    split string in half and convert all to lowercase
+        count vouls on left and right 
+        if same return true
+    */
+
+    let count1 = 0;
+    let count2 = 0;
+    const vowels = ['a', 'e', 'i', 'o', 'u']
+    s = s.toLowerCase()
+    let first = s.split('').slice(0, s.length/2)
+    let second = s.split('').slice(s.length/2)
+
+    first.forEach(el => {
+      if(vowels.includes(el)){
+        count1 += 1
+      }
+    })
+
+    second.forEach(el => {
+      if(vowels.includes(el)){
+        count2 += 1
+      }
+    })
+
+    if(count1 === count2) {
+      return true
+    } else {
+      return false
+    }
+};
