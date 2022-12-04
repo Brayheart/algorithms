@@ -569,3 +569,28 @@ var halvesAreAlike = function(s) {
       return false
     }
 };
+
+// https://leetcode.com/problems/sort-characters-by-frequency/submissions/
+
+var frequencySort = function(s) {
+  let obj = {}
+  let sol = []
+  
+  let arr = s.split('')
+  arr.forEach(el => {
+      if(!obj[el]){
+          obj[el] = 1
+      } else {
+          obj[el] += 1
+      }
+  })
+  
+  newArr = Object.entries(obj).sort((a,b) => b[1]-a[1])
+  
+  newArr.forEach(el => {
+      sol.push(Array(el[1]).fill(el[0]).join(''))
+  })
+  
+  return sol.join('')
+  
+};
