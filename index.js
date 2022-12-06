@@ -594,3 +594,17 @@ var frequencySort = function(s) {
   return sol.join('')
   
 };
+
+//https://leetcode.com/problems/jewels-and-stones/submissions/855751555/
+
+var numJewelsInStones = function(jewels, stones) {
+  var sol = []
+
+  stones.split('').forEach(el => {
+      if(jewels.includes(el)) {
+          sol.push(el)
+      }
+  })
+
+  return sol.length
+};
