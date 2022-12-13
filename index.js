@@ -608,3 +608,9 @@ var numJewelsInStones = function(jewels, stones) {
 
   return sol.length
 };
+
+//https://leetcode.com/problems/contains-duplicate/submissions/859377500/
+
+var containsDuplicate = function(nums) {
+    return Array.from(new Set(nums)).length === nums.length ? false : true;
+};
