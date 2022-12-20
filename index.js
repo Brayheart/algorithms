@@ -614,3 +614,19 @@ var numJewelsInStones = function(jewels, stones) {
 var containsDuplicate = function(nums) {
     return Array.from(new Set(nums)).length === nums.length ? false : true;
 };
+
+//https://leetcode.com/problems/majority-element/
+
+var majorityElement = function(nums) {
+    let obj = {}
+
+    nums.forEach(el => {
+        if(obj[el] == undefined) {
+            obj[el] = 1
+        } else {
+            obj[el] +=1
+        }
+    })
+
+    return Object.entries(obj).sort((a,b) => b[1] - a[1])[0][0]
+};
