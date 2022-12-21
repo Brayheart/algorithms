@@ -630,3 +630,10 @@ var majorityElement = function(nums) {
 
     return Object.entries(obj).sort((a,b) => b[1] - a[1])[0][0]
 };
+
+//https://leetcode.com/problems/length-of-last-word/submissions/862952967/
+
+var lengthOfLastWord = function(s) {
+  let temp = s.split(' ').filter(el => el != '')
+  return temp[temp.length - 1].length
+};
